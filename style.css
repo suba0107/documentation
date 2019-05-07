@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+
+}
+
+
+section {
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255);
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-family: 'lato', sans-serif;
+    font-weight: 100;
+    margin-top: 0.5rem;
+
+}
+
+/****HEADER + NAVIGATION****/
+
+header {
+    position: fixed;
+    background: rgba(27, 35, 38, 0.97);
+
+
+    width: 100%;
+}
+
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 1.5rem;
+}
+
+
+nav a {
+    color: #fcecbb;
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0.3rem 0;
+    padding: 0.3rem 0;
+
+
+}
+
+nav a:hover {
+    color: #D8C14E;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    text-decoration: underline;
+
+}
+
+
+/*****GENERELT*****/
+
+.sectionwrapper {
+    padding: 0 5vw;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin: 2vw 5vw;
+    color: #24303F;
+
+
+}
+
+h2 {
+    margin: 2vh 0;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #D8C14E;
+
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: #BF9F8D;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    color: #000000;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-top: 5px;
+
+
+}
+
+figcaption {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    color: #000000;
+
+
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/***SPLASH***/
+
+#splash {
+    background-image: url(image/splash.jpg);
+    width: 100vw;
+    height: 100vw;
+    max-width: none;
+    background-size: cover;
+    background-position: 50%;
+    opacity: 0.5;
+}
+
+#splash h1 {
+    margin: auto;
+    text-align: center;
+    padding-top: 45vw;
+    font-size: 1.5rem;
+
+
+}
+
+/***SPLASH SLUT***/
+/***FORSIDE***/
+#forside li {}
+
+/***Footer****/
+
+footer {
+    text-align: center;
+    background-color: #a3c2db;
+    padding: 2px;
+
+}
+
+footer p {
+    color: #1d1b29;
+    padding-top: 0.5rem;
+}
+
+
+
+/***MEDIA QUERY MIN 450px ***/
+@media screen and (min-width: 450px) {
+    #splash {
+        background-image: url(img/splash.jpg);
+        max-width: none;
+        background-size: cover;
+        width: 100vw;
+        height: 140vw;
+        background-position: 72%;
+    }
+
+}
+
+
+@media screen and (min-width: 525px) {
+    #splash {
+        background-image: url(img/splash.jpg);
+        max-width: none;
+        background-size: cover;
+        width: 100vw;
+        height: 120vw;
+        background-position: 72%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    #splash {
+        width: 100vw;
+        height: 80vw;
+        background-position: 70% 50%;
+    }
+
+
+
+    @media (orientation: landscape) {
+        #splash {
+            width: 100vw;
+            height: 56.25vw;
+            background-position: 0% 0%;
+            background-image: url(image/splash.jpg);
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+
+
+        header nav {
+            flex-direction: row;
+            justify-content: flex-end;
+
+        }
+
+
+        nav a {
+            margin: 0 0.25rem;
+            padding: 0 0.25rem;
+
+
+        }
+
+
+        @media screen and (min-width: 950px) {
+
+            body {
+                margin: 0;
+                overflow-x: hidden;
+                background-image: url(img/jon_tyson_opacity.jpg);
+                background-attachment: fixed;
+                background-size: cover;
+
+            }
+
+
+
+            @media screen and (min-width: 1200px) {
+                /*generelt*/
+
+                .sectionwrapper {
+                    padding: 0 1rem;
+                }
+
+                h1 {
+                    margin: 1rem 1rem 0.5rem 1rem;
+
+                }
+
+                /*SPlash*/
+                #splash {
+                    width: 100vw;
+                    height: 20vw;
+                    background-position: 0% 20%;
+                }
+
+                #splash h1 {
+                    margin: auto;
+                    text-align: center;
+                    padding-top: 9vw;
+                    font-size: 2rem;
+
+
+                }
+
+                /*FORSIDE*/
+                #forside .sectionwrapper {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin-top: 5rem;
+                }
+
+                .col {
+                    margin: 1rem;
+                }
