@@ -30,6 +30,10 @@ li {
 
 }
 
+img {
+    width: 100%;
+}
+
 /****HEADER + NAVIGATION****/
 
 header {
@@ -129,6 +133,20 @@ figcaption {
     font-style: italic;
     font-size: 1rem;
 }
+
+.image {
+    flex-grow: 1;
+    flex-basis: 400px;
+    margin: 1rem;
+}
+
+.col {
+    flex-grow: 1;
+    flex-basis: 400px;
+    margin: 1rem;
+
+}
+
 
 /***SPLASH***/
 
