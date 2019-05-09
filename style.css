@@ -8,6 +8,11 @@ body {
 
 }
 
+img {
+    width: 100%;
+    margin: 20px;
+}
+
 
 section {
     margin: 0 auto;
@@ -29,6 +34,7 @@ li {
     margin-top: 0.5rem;
 
 }
+
 
 /****HEADER + NAVIGATION****/
 
@@ -113,8 +119,6 @@ p {
     font-size: 1rem;
     line-height: 1.4rem;
     margin-top: 5px;
-
-
 }
 
 figcaption {
@@ -204,85 +208,104 @@ footer p {
         background-position: 70% 50%;
     }
 
+}
+
+@media (orientation: landscape) {
+    #splash {
+        width: 100vw;
+        height: 56.25vw;
+        background-position: 0% 0%;
+        background-image: url(image/splash.jpg);
+    }
+}
+
+@media screen and (min-width: 800px) {
 
 
-    @media (orientation: landscape) {
-        #splash {
-            width: 100vw;
-            height: 56.25vw;
-            background-position: 0% 0%;
-            background-image: url(image/splash.jpg);
-        }
+    header nav {
+        flex-direction: row;
+        justify-content: flex-end;
+
     }
 
-    @media screen and (min-width: 800px) {
+
+    nav a {
+        margin: 0 0.25rem;
+        padding: 0 0.25rem;
+    }
 
 
-        header nav {
-            flex-direction: row;
-            justify-content: flex-end;
+
+    @media screen and (min-width: 950px) {
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background-image: url(img/jon_tyson_opacity.jpg);
+            background-attachment: fixed;
+            background-size: cover;
 
         }
 
-
-        nav a {
-            margin: 0 0.25rem;
-            padding: 0 0.25rem;
-
-
+        p {
+            margin-right: 300px;
         }
 
 
-        @media screen and (min-width: 950px) {
+        @media screen and (min-width: 1200px) {
+            /*generelt*/
 
-            body {
-                margin: 0;
-                overflow-x: hidden;
-                background-image: url(img/jon_tyson_opacity.jpg);
-                background-attachment: fixed;
-                background-size: cover;
+            .sectionwrapper {
+                padding: 0 1rem;
+            }
 
+            h1 {
+                margin: 1rem 1rem 0.5rem 1rem;
             }
 
 
+            /*SPlash*/
+            #splash {
+                width: 100vw;
+                height: 20vw;
+                background-position: 0% 20%;
+            }
 
-            @media screen and (min-width: 1200px) {
-                /*generelt*/
+            #splash h1 {
+                margin: auto;
+                text-align: center;
+                padding-top: 9vw;
+                font-size: 2rem;
+            }
 
-                .sectionwrapper {
-                    padding: 0 1rem;
-                }
+            /*FORSIDE*/
+            #forside .sectionwrapper {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 5rem;
+            }
 
-                h1 {
-                    margin: 1rem 1rem 0.5rem 1rem;
+            .col {
+                margin: 1rem;
+                flex-basis: 200px;
+            }
 
-                }
+            #plan .row {
 
-                /*SPlash*/
-                #splash {
-                    width: 100vw;
-                    height: 20vw;
-                    background-position: 0% 20%;
-                }
-
-                #splash h1 {
-                    margin: auto;
-                    text-align: center;
-                    padding-top: 9vw;
-                    font-size: 2rem;
-
-
-                }
-
-                /*FORSIDE*/
-                #forside .sectionwrapper {
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                /*justify-content: space-between;
                     margin-top: 5rem;
-                }
+*/
+            }
 
-                .col {
-                    margin: 1rem;
-                }
+            #plan img {
+
+                flex-basis: 200px;
+                flex-grow: 1;
+
+            }
+        }
